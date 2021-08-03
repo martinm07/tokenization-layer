@@ -9,7 +9,8 @@ This is a concept for a tokenization algorithm that is a neural network layer, t
 
 #
 
-The tokenization layer is a layer that takes in text, split by letter and one-hot encoded, and outputs the same text, but represented by it's *patterns* (i.e. tokens) instead of letters. In other words, the tokenization layer returns a text of 0s, except with the patterns' *signatures* ("out") wherever said patterns were in the text. **Here's an example:**
+The tokenization layer is a layer that takes in text, split by letter and one-hot encoded, and outputs the same text, but represented by it's *patterns* (i.e. tokens) instead of letters. In other words, the tokenization layer returns a text of 0s, except with the patterns' *signatures* ("out") wherever said patterns were in the text. **Here's an example:**<br>
+<sub><i>Warning: Equations have low contrast when viewing on dark background</i></sub>
 
 <p align="center"><img src="https://latex.codecogs.com/svg.latex?%5Ctext%7B%22a%22%7D%3D%5Cbegin%7Bbmatrix%7D1%5C%5C0%5C%5C0%5C%5C0%5C%5C0%5Cend%7Bbmatrix%7D%20%5Ctext%7B%22b%22%7D%3D%5Cbegin%7Bbmatrix%7D0%5C%5C1%5C%5C0%5C%5C0%5C%5C0%5Cend%7Bbmatrix%7D%20%5Ctext%7B%22c%22%7D%3D%5Cbegin%7Bbmatrix%7D0%5C%5C0%5C%5C1%5C%5C0%5C%5C0%5Cend%7Bbmatrix%7D%20%5Ctext%7B%22d%22%7D%3D%5Cbegin%7Bbmatrix%7D0%5C%5C0%5C%5C0%5C%5C1%5C%5C0%5Cend%7Bbmatrix%7D%20%5Ctext%7B%22%20%22%7D%3D%5Cbegin%7Bbmatrix%7D0%5C%5C0%5C%5C0%5C%5C0%5C%5C1%5Cend%7Bbmatrix%7D"></p>
 <p align="center"><img src="https://latex.codecogs.com/svg.latex?%5Ctext%7Btext%20%3D%20%22a%20bad%20cab%22%7D%20%5Clongmapsto%20%5Cbegin%7Bbmatrix%7D%201%260%260%261%260%260%260%261%260%20%5C%5C%200%260%261%260%260%260%260%260%261%20%5C%5C%200%260%260%260%260%260%261%260%260%20%5C%5C%200%260%260%260%261%260%260%260%260%20%5C%5C%200%261%260%260%260%261%260%260%260%20%5Cend%7Bbmatrix%7D"></p>
