@@ -1,7 +1,7 @@
 # Tokenization Layer
 [![View in Deepnote](https://deepnote.com/static/buttons/view-in-deepnote-white.svg)](https://deepnote.com/viewer/github/martinm07/tokenization-layer/blob/main/concept-explained.ipynb)
 
-This is a concept for a tokenization algorithm that is a neural network layer, training as part of a model trying to solve some NLP task, to make tokens that are best for the task. This is explained further in `concept_explained.ipynb`.
+This is a concept for a tokenization algorithm that is a neural network layer, training as part of a model trying to solve some NLP task, to make tokens that are best for the task. This is explained further in [concept-explained.ipynb](concept-explained.ipynb).
 
 #
 
@@ -32,13 +32,13 @@ The tokenization layer is a layer that takes in text, split by letter and one-ho
 These patterns (i.e. tokens) should then update through training, and to do that we need to get the derivative of the layer w.r.t. the patterns. To do that we rewrite our layer to use convolutions (from CNNs), and derive from there. With this (and a couple finer details) we have the *tokenization layer*.
 
 However, as it stands now, it is unable to really train. At a high level, this is due to the fact that there are many possible tokens that will never be detected in a text (i.e. random strings of characters), and that the upstream gradient at the layer is probably impossible for it to follow (as in, the rest of the neural network wants the layer to produce outputs that are impossible for it to output).<br>
-Again, for more details refer to `concept_explained.ipynb`.
+Again, for more details refer to [concept-explained.ipynb](concept-explained.ipynb).
 
 ***
 
 If you would like a stable environment to work on this repository, there's [Deepnote](https://deepnote.com/home), which is where most of the work for this repository was done. Just create a new project and integrate with this repository.
 
-Despite that, here's the `requirements.txt`:<br>
+Despite that, here's the [requirements.txt](requirements.txt):<br>
 ```
 colorama==0.4.4
 seaborn==0.11.1
