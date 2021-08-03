@@ -2,7 +2,7 @@ Thank you for looking at contributing to this repository! Anybody and everybody 
 
 ## Using Issues
 If you've found an issue with the code, and an issue hasn't been opened concerning it already, create an issue yourself!<br>
-If you can fix an issue with the code, creates a branch with your fix/s, and open a Pull Request to merge the branch.
+If you can fix an issue with the code, open a Pull Request.
 
 ## Using Discussions
 Use Discussions if you:
