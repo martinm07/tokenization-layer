@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/tokenization_layer/__init__.py
+src/tokenization_layer.egg-info/PKG-INFO
+src/tokenization_layer.egg-info/SOURCES.txt
+src/tokenization_layer.egg-info/dependency_links.txt
+src/tokenization_layer.egg-info/requires.txt
+src/tokenization_layer.egg-info/top_level.txt

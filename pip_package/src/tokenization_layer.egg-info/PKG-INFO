@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: tokenization-layer
+Version: 0.0.1
+Summary: An NLP tokenization algorithm that is a trainable layer for neural networks.
+Home-page: https://github.com/martinm07/tokenization-layer
+Author: Martin Molnar
+Author-email: martin.molnar07@gmail.com
+License: UNKNOWN
+Project-URL: Package Documentation, https://martin-github07.gitbook.io/tokenization-layer/
+Project-URL: Bug Tracker, https://github.com/martinm07/tokenization-layer/issues
+Project-URL: Project Discussion, https://github.com/martinm07/tokenization-layer/discussions
+Keywords: natural-language-processing,research,neural-networks,tokenization,tensorflow2
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+This is a package for a concept about a tokenization algorithm that is a neural network layer, training as part of a model trying to solve some NLP task, to make tokens that are best for the task. You can find more information on the [GitHub repository](https://github.com/martinm07/tokenization-layer).
+
+#
+
+<img src="https://imgur.com/gxxJtjz.png">
+
+#
+
+This package mainly consists of the `TokenizationLayer`, which is a `tf.keras` layer doing the described above. However it also contains initializers for the layer's parameter, a function for one-hot encoding a string as letters, and an Embedding layer, that doesn't have to be the first layer in the network unlike the official keras version.
+
+Documentation for this package is [here](https://martin-github07.gitbook.io/tokenization-layer/).
+
