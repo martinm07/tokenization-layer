@@ -52,3 +52,10 @@ ipython==7.26.0
 scikit_learn==0.24.2
 ```
 
+***
+
+I also made a PIP package for this. You can see the PyPi page [here](https://pypi.org/project/tokenization-layer/0.0.1/), or just download it using
+```
+pip install tokenization-layer
+```
+Additionally, [here](https://martin-github07.gitbook.io/tokenization-layer/) is the documentation on it (for contributing to the docs, here's the synchronised [GitHub repo](https://github.com/martinm07/tokenization-layer-docs)).
