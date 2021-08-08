@@ -32,29 +32,6 @@ class PatternsInitilizerMaxCover(Initializer):
     filter_over : int, optional (default: `1`)
         The minimum number of time a gram must occur in the corpus
         to be a possible pattern.
-
-    Example
-    -------
-    ```
-    import re
-    import nltk
-    nltk.download("gutenberg")
-    from nltk.corpus import gutenberg
-
-    corpus = gutenberg.raw("austen-emma.txt")
-    # Remove arbritray strings of "\\n"s and " "s
-    corpus = re.sub(r"[\\n ]+", " ", corpus.lower())
-
-    chars = "".join(pd.Series(list(corpus)).value_counts(sort=True).keys()) + "<UNK>"
-    init = tokenization_layer.PatternsInitilizerMaxCover(corpus, chars)
-
-    # Initialize patterns of shape `(num_chars, max_len, 1, num_neurons)`
-    #   Where there are `num_neurons` patterns (one for each neuron), each 
-    #   with random length/number of characters (but padded to be `max_len`)
-    #   and each character being a one-hot encoding with `num_chars` 
-    #   categories.
-    patterns = init((len(init.chars), max(init.gram_lens), 1, 200))
-    ```
     """
     # Provide a list of possible pattern lengths (as `gram_lens`), when making a pattern it 
     # randomly chooses a length for that pattern (with uniform probability) from `gram_lens`.

@@ -73,39 +73,6 @@ class TokenizationLayer(Layer):
     pattern_lens : int
         Length/Number of characters every pattern will be.
     **kwargs
-
-    Example
-    -------
-    ```
-    from tensorflow import keras
-    import re
-    import nltk
-    nltk.download("gutenberg")
-    from nltk.corpus import gutenberg
-
-    corpus = gutenberg.raw("austen-emma.txt")
-    # Remove arbritray strings of "\\n"s and " "s
-    corpus = re.sub(r"[\\n ]+", " ", corpus.lower())
-
-    # We're assuming we got `chars` when preprocessing the train data
-    init = tokenization_layer.PatternsInitilizerMaxCover(corpus, chars)
-
-    model = keras.Sequential([
-        tokenization_layer.TokenizationLayer(500, init, max(init.gram_lens)),
-        Lambda(lambda x: tf.transpose(tf.squeeze(x, 3), [0, 2, 1])),
-        tokenization_layer.EmbeddingLayer(1),
-        Flatten(),
-        BatchNormalization(),
-        Dense(64),
-        Dense(1, activation="sigmoid")
-    ])
-    # Initialize parameters and shapes by calling on dummy inputs
-    _ = model(tf.zeros((32, 30, 2000, 1)))
-    _ = model(tf.zeros((50, 30, 2000, 1)))
-
-    model.compile(optimizer="adam", loss="binary_crossentropy", metrics=["accuracy"])
-    model.fit(X_train_data, epochs=10)
-    ```
     """
     def __init__(self, n_neurons, initializer, pattern_lens, **kwargs):
         super().__init__(**kwargs)
