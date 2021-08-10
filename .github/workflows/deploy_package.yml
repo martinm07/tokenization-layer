@@ -1,4 +1,4 @@
-name: Deploy Python Package to PyPi
+name: Build & Deploy Package to PyPI
 
 on:
   release:
@@ -9,11 +9,18 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  build_and_deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Publish a Python distribution to PyPI
+      - uses: actions/checkout@v2
+      
+      - name: Build Python Distribution
+        run: |
+          python3 -m pip install --upgrade build
+          cd pip_package
+          python3 -m build
+          
+      - name: Publish Python distribution to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           user: __token__
